@@ -61,7 +61,7 @@ export default function Register()
         <div className="w-full">
             <div className="max-w-[1080px] mx-auto w-11/12 flex justify-center items-center pt-20">
                 <div className="w-[700px] border-2 py-9 px-8 rounded-md shadow-lg">
-                  <h1 className="text-center text-3xl">Join Logo.</h1>
+                  <h1 className="text-center text-3xl">Join MindMingle.</h1>
 
 
                   <form className="w-full mt-10" onSubmit={handleSubmit}>
