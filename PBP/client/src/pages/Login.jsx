@@ -38,14 +38,18 @@ export default function Login({setIsLoggedIn})
 
             if(data.success)
             {
-              navigate('/blogs');
-              setIsLoggedIn(true);
-              toast.success('Signed in successfully');
+                navigate('/blogs');
+                 setIsLoggedIn(true);
+                toast.success('Signed in successfully');
+                
             }
 
             else{
-                toast.error('User not registered');
+                toast.error('Incorrect email or password');
             }
+
+            
+
         }catch(error){
              console.error(error);
         }

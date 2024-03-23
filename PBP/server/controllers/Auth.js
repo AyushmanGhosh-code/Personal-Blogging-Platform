@@ -52,7 +52,7 @@ exports.login = async(req,res) => {
             })
         }
 
-        const user = await User.findOne({email:email});
+        let user = await User.findOne({email:email});
         if(!user)
         {
             return res.status(403).json({
@@ -72,6 +72,7 @@ exports.login = async(req,res) => {
                 expiresIn:'120s'
             });
 
+            user = user.toObject();
             user.token = token;
             
             res.status(200).json({

@@ -13,8 +13,6 @@ export default function Home()
     async function fetchBlogs()
     {
         const response = await axios.get(url);
-        console.log(response.data);
-
         setBlogs(response.data.articles);
     }
 
@@ -46,8 +44,8 @@ export default function Home()
                 <div className='w-full flex justify-between items-center mt-9'></div>
                 <div className='flex gap-7 justify-center items-center flex-wrap'>
                     {
-                        blogs.map((blog) => (
-                            <div className='max-w-[500px] w-11/12 flex flex-col justify-center items-center'>
+                        blogs.map((blog,index) => (
+                            <div className='max-w-[500px] w-11/12 flex flex-col justify-center items-center' key={index}>
                                <div>
                                 <p className='font-bold text-[14px]'>{blog.author}</p>
                                 <p className='font-bold text-xl mt-1'>{blog.title}</p>

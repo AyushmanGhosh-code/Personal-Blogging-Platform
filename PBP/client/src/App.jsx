@@ -6,6 +6,8 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Blogs from './pages/Blogs';
 import Create from './pages/Create';
+import Update from './pages/Update';
+
 
 function App() {
   
@@ -21,6 +23,7 @@ function App() {
         <Route path='/register' element={<Register/>}/>
         <Route path='/blogs' element={<Blogs/>}/>
         <Route path='/create-blog' element={<Create/>}/>
+        <Route path='/update/:id' element={<Update/>}/>
       </Routes>
    </div>
   )
